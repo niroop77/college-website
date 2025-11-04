@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design</title>
+    <link rel="icon" type="image/x-icon" href="images/Favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--Nav Menu-->
+    <section class="header">
+        <nav>
+  <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+  <div class="nav-links" id="navLinks">
+    <i class="fa fa-times" onclick="hideMenu()"></i>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT US</a></li>
+      <li><a href="#">COURSE</a></li>
+      <li><a href="#">BLOG</a></li>
+      <li><a href="#">CONTACT US</a></li>
+    </ul>
+  </div>
+  <i class="fa fa-bars" onclick="showMenu()"></i>
+</nav>
+
+<div class="text-box">
+<h1>Wolds Biggest University</h1>
+<p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS, <br>Javascript and you are good to go.</p>
+<a href="" class="hero-btn">Visit Us to Know More</a>
+</div>
+    </section>
+
+
+<section class="course">
+    <h1>Courses Offered</h1>
+    <p>Explore our wide range of industry-relevant courses designed to build practical skills and advance your career in today’s competitive world.</p>
+<div class="row">
+<div class="course-col">
+    <h3>Intermediate</h3>
+    <p>Build on your foundational knowledge with deeper concepts and hands-on practice to boost your skills.</p>
+</div>
+<div class="course-col">
+    <h3>Graduate</h3>
+    <p>Advance your expertise with in-depth knowledge, research-based learning, and professional-level skills.</p>
+</div>
+<div class="course-col">
+    <h3>Post Graduate</h3>
+    <p>Master advanced concepts and specialize in your field with research-driven, career-focused learning.</p>
+</div>
+</div>
+</section>
+<!--courses New
+<div class="course">
+ <h1>Courses Offered</h1>
+    <p class="lead">Explore our wide range of industry-relevant courses — from short workshops to advanced postgraduate programs.</p>
+<section class="cards" aria-label="Course categories">
+
+      <article class="card" tabindex="0" aria-labelledby="c1">
+        <div class="card-header">
+          <div class="icon">I</div>
+          <div>
+            <h3 id="c1">Intermediate</h3>
+            <div class="tag">Hands-on • Foundation</div>
+          </div>
+        </div>
+        <p>Build on your foundational knowledge with deeper concepts and hands-on practice to boost your skills for professional roles.</p>
+        <div class="cta">
+          <button class="btn btn-primary">View courses</button>
+          <button class="btn btn-ghost" aria-label="More about Intermediate">Learn more</button>
+        </div>
+      </article>
+
+      <article class="card" tabindex="0" aria-labelledby="c2">
+        <div class="card-header">
+          <div class="icon">G</div>
+          <div>
+            <h3 id="c2">Graduate</h3>
+            <div class="tag">Research • Professional</div>
+          </div>
+        </div>
+        <p>Build on your foundational knowledge with deeper concepts and hands-on practice to boost your skills for professional roles.</p>
+        <div class="cta">
+          <button class="btn btn-primary">Explore tracks</button>
+          <button class="btn btn-ghost">Admissions</button>
+        </div>
+      </article>
+
+      <article class="card" tabindex="0" aria-labelledby="c3">
+        <div class="card-header">
+          <div class="icon">P</div>
+          <div>
+            <h3 id="c3">Post Graduate</h3>
+            <div class="tag">Advanced • Specialization</div>
+          </div>
+        </div>
+        <p>Master advanced concepts and specialize in your field with research-driven, career-focused learning for leadership roles.</p>
+        <div class="cta">
+          <button class="btn btn-primary">Apply now</button>
+          <button class="btn btn-ghost">Scholarships</button>
+        </div>
+      </article>-->
+
+      <!-- More options like the user requested 
+      <article class="card" tabindex="0" aria-labelledby="c4">
+        <div class="card-header">
+          <div class="icon">C</div>
+          <div>
+            <h3 id="c4">Certificate</h3>
+            <div class="tag">Short • Industry</div>
+          </div>
+        </div>
+        <p>Short certificate courses focused on job-ready skills and tools — ideal for upskilling quickly and effectively.</p>
+        <div class="cta">
+          <button class="btn btn-primary">See certificates</button>
+          <button class="btn btn-ghost">Upcoming dates</button>
+        </div>
+      </article>
+
+      <article class="card" tabindex="0" aria-labelledby="c5">
+        <div class="card-header">
+          <div class="icon">D</div>
+          <div>
+            <h3 id="c5">Diploma</h3>
+            <div class="tag">Structured • Career Path</div>
+          </div>
+        </div>
+        <p>Multi-module diploma programs giving a structured path from fundamentals to applied expertise over a few months.</p>
+        <div class="cta">
+          <button class="btn btn-primary">Program details</button>
+          <button class="btn btn-ghost">Enroll</button>
+        </div>
+      </article>
+
+      <article class="card" tabindex="0" aria-labelledby="c6">
+        <div class="card-header">
+          <div class="icon">W</div>
+          <div>
+            <h3 id="c6">Workshop</h3>
+            <div class="tag">Interactive • Short</div>
+          </div>
+        </div>
+        <p>Hands-on workshops and bootcamps where you learn by doing — perfect for building a portfolio or solving real-world problems.</p>
+        <div class="cta">
+          <button class="btn btn-primary">Upcoming workshops</button>
+          <button class="btn btn-ghost">Request workshop</button>
+        </div>
+      </article>
+
+    </section>
+    </div>-->
+<!--Campus-->
+<section class="campus">
+<div class="campus1">
+    <h1>Our Global Campus</h1>
+    <p>Experience world-class education across international locations with diverse communities and global opportunities.</p>
+</div>
+<div class="row">
+<div class="campus-col">
+   <img src="images/london.png">
+</div>
+</div>
+</section>
+
+<!--toggle Menu-->
+<script>
+  var navLinks = document.getElementById("navLinks");
+
+  function showMenu() {
+    navLinks.style.right = "0";
+  }
+
+  function hideMenu() {
+    navLinks.style.right = "-200px";
+  }
+</script>
+
+
+</body>
+</html>
