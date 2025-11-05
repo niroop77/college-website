@@ -10,8 +10,7 @@
 .header {
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)),
-    url('images/banner.png') no-repeat center center/cover;
+  background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/banner.png) no-repeat center center/cover;
   position: relative;
 }
 
@@ -108,6 +107,9 @@ nav .fa {
   nav {
     padding: 20px 30px;
   }
+  .header{
+    min-height: 60vh !important;
+  }
 
   .nav-links {
     position: absolute;
@@ -153,11 +155,11 @@ nav .fa {
   text-align: center;
 }
 .text-box h1 {
-  font-size: 64px;
+  font-size: 20px;
 }
 .text-box p {
   font-size: 15px;
-  margin: 10px 0 40px;
+  margin: 0px 0 10px;
 }
 
 /* ----------- Button Style ----------- */
