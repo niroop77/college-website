@@ -57,7 +57,8 @@ nav img.logo {
 }
 
 .nav-links ul li a:hover {
-  color: #00bcd4;
+  background-color: #f44336;
+  color: #fff;
 }
 
 /* --- Hide icons on large screens --- */
@@ -113,7 +114,7 @@ nav .fa {
 
   .nav-links {
     position: absolute;
-    background: rgba(0, 0, 0, 0.9);
+    background: #f44336;
     height: 100vh;
     width: 200px;
     top: 0;
@@ -230,12 +231,100 @@ h3 {
 .campus-col {
   border-radius: 10px;
   margin-bottom: 30px;
-  position: relative;
   overflow: hidden;
+  flex-basis: 32%;
+
 }
 .campus-col img {
   width: 100%;
 }
+.layer-1{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+ /* Gallery layout */
+    .gallery {
+      display: flex;
+      gap: 16px;
+      align-items: stretch;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 12px;
+    }
+
+    /* Each card holds an image + overlay */
+    .card {
+      position: relative;
+      width: 100%;
+      flex: 1 1 0; /* distribute space equally */
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      min-width: 0; /* prevents overflow on small screens */
+    }
+
+    .card img {
+      display: block;
+      width: 100%;
+      height: 100%; /* fixed height for consistent row */
+      object-fit: cover;
+      transition: transform 350ms ease;
+    }
+
+    /* Overlay that appears on hover */
+    .overlay {
+      position: absolute;
+      inset: 0; /* top:0; right:0; bottom:0; left:0 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+
+      /* start invisible */
+      background: rgba(255, 200, 200, 0); /* transparent light-red at rest */
+      color: #111;
+      opacity: 0;
+      transition: background 250ms ease, opacity 250ms ease, transform 350ms ease;
+      transform: translateY(8px);
+    }
+
+    .overlay .text {
+      backdrop-filter: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      line-height: 1.2;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+    }
+
+    /* Hover/focus state */
+    .card:hover img,
+    .card:focus-within img {
+      transform: scale(1.05);
+    }
+
+    .card:hover .overlay,
+    .card:focus-within .overlay {
+      background: rgba(266, 200, 200, 0.65); /* light red background on hover */
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Make the overlay text accessible when keyboard focusing the link inside */
+    .card a { display: block; height: 100%; color: inherit; text-decoration: none; }
+
+    /* Responsive: stack on smaller screens */
+    @media (max-width: 880px) {
+      .gallery {
+        flex-direction: column;
+      }
+
+      .card img { height: 220px; }
+    }
 /* Media Queries */
 @media (max-width: 700px) {
   .row {
