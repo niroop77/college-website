@@ -76,15 +76,14 @@ nav .fa {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
-.text-box h1 {
+.text-heading{
   font-size: 3.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-
 .text-box p {
   font-size: 1rem;
   line-height: 1.6;
+  color: #fff;
 }
 
 .hero-btn {
@@ -144,6 +143,9 @@ nav .fa {
     top: 25px;
     right: 25px;
   }
+  .text-heading {
+  font-size: 20px;
+}
 }
 /* ----------- Text Box ----------- */
 .text-box {
@@ -154,9 +156,6 @@ nav .fa {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-}
-.text-box h1 {
-  font-size: 20px;
 }
 .text-box p {
   font-size: 15px;
@@ -193,7 +192,7 @@ h1 {
   font-weight: 600;
 }
 p {
-  color: #777;
+  color: #000;
   font-size: 14px;
   font-weight: 300;
   line-height: 22px;
@@ -209,7 +208,7 @@ p {
   background: #fff3f3;
   border-radius: 10px;
   margin-bottom: 5%;
-  padding: 20px 12px;
+  padding: 20px 0px 0px 0px;
   box-sizing: border-box;
 }
 .course-col:hover {
@@ -247,7 +246,6 @@ h3 {
  /* Gallery layout */
     .gallery {
       display: flex;
-      gap: 16px;
       align-items: stretch;
       justify-content: center;
       max-width: 1200px;
@@ -262,7 +260,6 @@ h3 {
       flex: 1 1 0; /* distribute space equally */
       overflow: hidden;
       border-radius: 8px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
       min-width: 0; /* prevents overflow on small screens */
     }
 
@@ -285,8 +282,8 @@ h3 {
       padding: 1rem;
 
       /* start invisible */
-      background: rgba(255, 200, 200, 0); /* transparent light-red at rest */
-      color: #111;
+      background: rgba(226, 0, 0, 0.7); /* transparent light-red at rest */
+      color: #fff;
       opacity: 0;
       transition: background 250ms ease, opacity 250ms ease, transform 350ms ease;
       transform: translateY(8px);
@@ -309,7 +306,7 @@ h3 {
 
     .card:hover .overlay,
     .card:focus-within .overlay {
-      background: rgba(266, 200, 200, 0.65); /* light red background on hover */
+      background: rgba(226, 0, 0, 0.7); /* light red background on hover */
       opacity: 1;
       transform: translateY(0);
     }
@@ -317,13 +314,90 @@ h3 {
     /* Make the overlay text accessible when keyboard focusing the link inside */
     .card a { display: block; height: 100%; color: inherit; text-decoration: none; }
 
+    /*facilities*/
+    .facilities{
+      width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+    }
+    .facilities-col{
+      flex-basis: 31%;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      text-align: left;
+    }
+    .facilities-col img{
+      width: 100%;
+      border-radius: 10px;
+    }
+    .facilities-col p{
+      padding: 0px;
+    }
+    .facilities-col h3{
+      margin-top: 16px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    /*testimonials*/
+    .testimonials{
+      width: 80%;
+  margin: auto;
+  padding-top: 50px;
+    }
+    .testimonials-col {
+  flex-basis: 48%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  background: #fff3f3;
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* keeps image centered vertically */
+}
+
+.testimonials-col img {
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+
+/* 🔧 Fix: Stack text vertically and push name to bottom center */
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* space between paragraph and name */
+  align-items: left; /* center horizontally */
+  height: 100%;
+  width: 100%;
+}
+
+.text-content p {
+  text-align: left;
+  margin: 0;
+}
+
+.text-content h3 {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: left;
+}
+.ts-heading{
+  text-align: left !important;
+}
+.ts-para{
+  padding: 0px !important;
+}
+
     /* Responsive: stack on smaller screens */
     @media (max-width: 880px) {
       .gallery {
         flex-direction: column;
       }
 
-      .card img { height: 220px; }
+      .card img { height: 100%; }
     }
 /* Media Queries */
 @media (max-width: 700px) {
@@ -339,8 +413,8 @@ h3 {
 .card {
   background: linear-gradient(180deg, var(--accent), transparent);
   border-radius: var(--radius);
-  padding: 28px 22px;
-  min-height: 160px;
+  padding: 10px 10px;
+  min-height: 200px;
   box-shadow: 0 6px 18px rgba(32, 32, 32, 0.04);
   border: 1px solid rgba(131, 94, 165, 0.06);
   display: flex;
