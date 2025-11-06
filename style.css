@@ -53,13 +53,30 @@ nav img.logo {
   color: #fff;
   text-decoration: none;
   font-size: 16px;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-.nav-links ul li a:hover {
-  background-color: #f44336;
-  color: #fff;
+/* underline effect */
+.nav-links ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #f44336;
+  transition: width 0.3s ease;
 }
+
+.nav-links ul li a:hover::after {
+  width: 100%;
+}
+
+.nav-links ul li a:hover {
+  color: #f44336; /* optional: change text color on hover */
+}
+
 
 /* --- Hide icons on large screens --- */
 nav .fa {
