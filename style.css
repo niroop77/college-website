@@ -25,12 +25,12 @@ nav {
   top: 0;
   left: 0;
   z-index: 100;
-  background: rgba(17, 17, 17, 0.658); /* Transparent effect */
+  background: #000000fc; /* Transparent effect */
   backdrop-filter: blur(8px);
 }
 
 nav img.logo {
-  width: 150px;
+  width: 200px;
 }
 
 /* --- Nav Links --- */
