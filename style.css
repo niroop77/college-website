@@ -429,7 +429,7 @@ h3 {
 .footer{
   width: 100%;
   text-align: center;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 .footer h4{
   margin-bottom: 25px;
@@ -486,4 +486,34 @@ padding: 18px 0px;
 }
 .space{
   padding: 10px 10px !important;
+}
+
+/* About Us page */
+.subheader{
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+.subheader h1{
+  margin-top: 50px;
+  padding: 120px;
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 700px) {
+  .subheader {
+    height: 30vh !important;
+  }
+  .subheader h1{
+  margin-top: 20px !important;
+  padding: 120px !important;
+  font-size: 20px !important;
+}
 }
